@@ -14,13 +14,13 @@
 # Proposed Data Augmentation by the HB-IRIT-UIS team
 
 This repository presents the solution created by our team to generate a database of 1000 MRIs from 100 MRIs of macrotrabecular carcinomas.
-Based on the implemented algorithm, the user will be able to enter the number of cases to generate. The code will automatically create three new and different MRIs of hepatic macrotrabecular carcinomas for each desired case. To test the AI-based data augmentation method created by our team, you can go [to this link.]().
+Based on the implemented algorithm, the user will be able to enter the number of cases to generate. The code will automatically create three new and different MRIs of hepatic macrotrabecular carcinomas for each desired case. To test the AI-based data augmentation method created by our team, you can go [to this link.]()
 
-Figure outlines the method proposed by our team to address the challenge of augmenting MRI data with rare tumors.
-Note that the framework was composed of 5 main stages: edge detection, manual liver segmentation, tumor masks transformation, generation of new masks, and training of a Pix2Pix network.
+Figure 1 outlines the method proposed by our team to address the challenge of augmenting MRI data with rare tumors.
+Note that the framework was composed of 5 main stages: manual liver segmentation, edges detection, transformation of tumor masks, generation of new masks, and training of a Pix2Pix network.
 
 ![framework](figs/framework1.png)
-
+Fig. 1: Overall framework of the proposed AI Data Augmentation in the Service of Rare Tumors.
 
 ### 1. Manual segmentation of livers
 
