@@ -19,7 +19,7 @@ if __name__ == '__main__':
         print(patient_id)
         if not os.path.exists(os.path.join(root_data, patient_id)):
             os.makedirs(os.path.join(root_data, patient_id), exist_ok=True)
-        if img == 'SFR_Data/618bf09bbf94a7a5693bc4cf_SCHEMA_ZNAT6KGXFZN5UGCOF_COUPE_t1pp.npy':
+        if img.split("/")[-1] == 'SFR_Data/618bf09bbf94a7a5693bc4cf_SCHEMA_ZNAT6KGXFZN5UGCOF_COUPE_t1pp.npy':
             shutil.move(img, os.path.join(root_data, patient_id, '618bf09bbf94a7a5693bc4cf_DC_Coupe_T1 phase '
                                                                  'portale.npy'))
         else:
