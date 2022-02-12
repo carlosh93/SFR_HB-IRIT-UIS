@@ -1,5 +1,6 @@
 # Byte-compiled / optimized / DLL files
 code/data/*.tar
+code/data/SFR_Data/
 local_venv
 *.tar
 *.idea
