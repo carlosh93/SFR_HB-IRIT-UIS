@@ -14,9 +14,7 @@
 # Proposed Data Augmentation by the HB-IRIT-UIS team
 
 This repository presents the solution created by our team to generate a database of 1000 MRIs from 100 MRIs of macrotrabecular carcinomas.
-Based on the implemented algorithm, the user will be able to enter the number of cases to generate. The code will automatically create three new and different MRIs of hepatic macrotrabecular carcinomas for each desired case. To test the AI-based data augmentation method created by our team, you can go [to this link.]()
-
-
+Based on the implemented algorithm, the user will be able to enter the number of cases to generate. The code will automatically create three new and different MRIs of hepatic macrotrabecular carcinomas for each desired case. To test the AI-based data augmentation method created by our team, you can go [to this link.](https://drive.google.com/drive/folders/1bDTZ85NSm0GxkLIpdkIFi9GJNArX5zYp?usp=sharing) The steps to run the code are described at the end of this repository.
 
 Figure 1 outlines the method proposed by our team to address the challenge of augmenting MRI data with rare tumors.
 Note that the framework was composed of 5 main stages: manual liver segmentation, edges detection, transformation of tumor masks, generation of new masks, and training of a Pix2Pix network.
@@ -65,7 +63,7 @@ Finally, synthetic images will be created that preserve the quality, appearance,
 
 # Steps to Run the Code
 
-The following steps must be executed in Google Colab.
+The following steps must be executed in the [Google Colab file available here.](Thttps://drive.google.com/drive/folders/1bDTZ85NSm0GxkLIpdkIFi9GJNArX5zYp?usp=sharing)
 
 ### 0. Requirements
 The Code was tested only in Linux operating system. See the `requirements.txt` file for python packages requirements. Install them using
