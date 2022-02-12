@@ -16,8 +16,11 @@
 This repository presents the solution created by our team to generate a database of 1000 MRIs from 100 MRIs of macrotrabecular carcinomas.
 Based on the implemented algorithm, the user will be able to enter the number of cases to generate. The code will automatically create three new and different MRIs of hepatic macrotrabecular carcinomas for each desired case. To test the AI-based data augmentation method created by our team, you can go [to this link.]().
 
-Figure 1 outlines the method proposed by our team to address the challenge of augmenting MRI data with rare tumors.
+Figure outlines the method proposed by our team to address the challenge of augmenting MRI data with rare tumors.
 Note that the framework was composed of 5 main stages: edge detection, manual liver segmentation, tumor masks transformation, generation of new masks, and training of a Pix2pix network.
+
+![framework](figs/framework.png)
+
 
 ### 1. Edges detection
 
