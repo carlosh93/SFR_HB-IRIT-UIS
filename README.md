@@ -17,7 +17,7 @@ This repository presents the solution created by our team to generate a database
 Based on the implemented algorithm, the user will be able to enter the number of cases to generate. The code will automatically create three new and different MRIs of hepatic macrotrabecular carcinomas for each desired case. To test the AI-based data augmentation method created by our team, you can go [to this link.]().
 
 Figure outlines the method proposed by our team to address the challenge of augmenting MRI data with rare tumors.
-Note that the framework was composed of 5 main stages: edge detection, manual liver segmentation, tumor masks transformation, generation of new masks, and training of a Pix2pix network.
+Note that the framework was composed of 5 main stages: edge detection, manual liver segmentation, tumor masks transformation, generation of new masks, and training of a Pix2Pix network.
 
 ![framework](figs/framework1.png)
 
@@ -30,16 +30,15 @@ First, the MRIs of the 100 cases were manually segmented by the radiologist of t
 
 ### 2. Edges detection
 
-Second, our method uses an algorithm to compute an edge mask for each of the 300 provided MRIs. Specifically, we use the [Canny edge detection](https://github.com/csbanon/canny-edge-detector), an operator that uses a multi-stage algorithm to detect a wide range of edges in images. For this stage, 12 variations of the lower thresholding in the range between 30 and 120 are made for each image.
+Second, our method uses an algorithm to compute an edge mask for each of the 300 provided MRIs. Specifically, we use the [Canny edge detection](https://github.com/csbanon/canny-edge-detector), an operator that uses a multi-stage algorithm to detect a wide range of edges in images. In this stage, 12 variations of the lower threshold are made in the range between 30 and 120 for each image. At the end of our pipeline, each edge mask will allow a different new MRI image to be generated. Thus, the variation of the threshold value in this step enables a first data augmentation.
 
 ![edges](figs/edges.png)
-
 
 ### 3. Transformation of tumor masks
 
 Then, the tumor masks provided by the challenge are automatically transformed with the geometric operations: zoom, rotation and translation. Specifically, our code generates a new tumor mask for each new case to be generated.
 
-### 4. Generation of new masks
+### 4. Generation of new masks: edges + tumor
 
 Next, the new tumor masks are intersected with the liver segmentation of the source images, in order to ensure that the new tumor is located within the liver. In the figure, the liver is shown in green, tumor inside in red, and tumor outside in blue. Note in the figure that the edges mask (blue lines) calculated in (1) is combined with the mask of the tumor inside (in red). Four random examples of this step are presented below.
 
@@ -47,8 +46,13 @@ Next, the new tumor masks are intersected with the liver segmentation of the sou
 
 ### 5. Training of a Pix2Pix network
 
-Finally, all the MRI images are used to feed and train a [Pix2Pix adversarial network](https://arxiv.org/abs/1611.07004), capable of generating completely new MRI images of the liver with tumors, from edges and tumor masks. Implementation of ''Image-to-Image Translation with Conditional Adversarial Networks''.
+Finally, all the MRI images are used to feed and train a [Pix2Pix adversarial network](https://arxiv.org/abs/1611.07004), capable of generating completely new MRI images of the liver with tumors, from the edges and tumor masks.
 
+This repository provides an algorithm trained with the method described here.
+To generate X number of cases, this method will create:
+1) X new edge masks from random threshold values in a defined range, and
+2) X different tumor masks from random transformations of sizes, rotations, and positions.
+Tumor masks will intersect with liver masks to ensure tumor position. And finally, synthetic images will be recreated that preserve the quality, appearance, and spatial distribution of the images provided by the challenge.
 
 # Steps to Run the Code
 ### 0. Requirements
