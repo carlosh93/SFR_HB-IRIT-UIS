@@ -77,4 +77,4 @@ python preprocessing.py
 ### 2. Trained Model
 
 Download the trained models [from here.](https://drive.google.com/drive/folders/1661I8jEImgGFBU-ofclQQGq_C7p-UPql?usp=sharing) 
-These files must be downloaded into the Checkpoints folder: "code/pix2pix/checkpoints"
+These files must be downloaded into the Checkpoints folder: *"code/pix2pix/checkpoints"*
