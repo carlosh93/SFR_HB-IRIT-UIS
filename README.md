@@ -22,19 +22,17 @@ Note that the framework was composed of 5 main stages: edge detection, manual li
 ![framework](figs/framework.png)
 
 
-### 1. Edges detection
+### 1. Manual segmentation of livers
 
-First, our method uses an algorithm to compute an edge mask for each of the 300 provided MRIs. Specifically, we use the [Canny edge detection](https://github.com/csbanon/canny-edge-detector), an operator that uses a multi-stage algorithm to detect a wide range of edges in images. For this stage, 12 variations of the lower thresholding in the range between 30 and 120 are made for each image.
-
-![edges](figs/edges.png)
-
-
-
-### 2. Manual segmentation of livers
-
-Second, the MRIs of the 100 cases were manually segmented by the radiologist of the HB-IRIT-UIS team. For this activity, the open-source project Computer Vision Annotation tool [CVAT](https://cvat.org/auth/login) was used.
+First, the MRIs of the 100 cases were manually segmented by the radiologist of the HB-IRIT-UIS team. For this activity, the open-source project Computer Vision Annotation tool [CVAT](https://cvat.org/auth/login) was used.
 
 ![fig2](figs/FIG2_livers.png)
+
+### 2. Edges detection
+
+Second, our method uses an algorithm to compute an edge mask for each of the 300 provided MRIs. Specifically, we use the [Canny edge detection](https://github.com/csbanon/canny-edge-detector), an operator that uses a multi-stage algorithm to detect a wide range of edges in images. For this stage, 12 variations of the lower thresholding in the range between 30 and 120 are made for each image.
+
+![edges](figs/edges.png)
 
 
 ### 3. Transformation of tumor masks
