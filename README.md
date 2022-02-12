@@ -56,7 +56,10 @@ As a summary, this repository provides an algorithm trained with the method desc
 2) X different tumor masks from random transformations of sizes, rotations, and positions.
 Tumor masks will intersect with liver masks to ensure tumor position. 
 
-Finally, synthetic images will be recreated that preserve the quality, appearance, and spatial distribution of the images provided by the challenge.
+Finally, synthetic images will be created that preserve the quality, appearance, and spatial distribution of the images provided by the challenge. A few samples of generated images are shown in Fig. 5.
+
+![fig5](figs/FIG5.png)
+*Fig. 5: Generated MRIs for two cases with the proposed method by the HB-IRIT-UIS team.*
 
 # Steps to Run the Code
 ### 0. Requirements
