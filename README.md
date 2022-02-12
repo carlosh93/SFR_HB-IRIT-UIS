@@ -20,7 +20,7 @@ Figure 1 outlines the method proposed by our team to address the challenge of au
 Note that the framework was composed of 5 main stages: manual liver segmentation, edges detection, transformation of tumor masks, generation of new masks, and training of a Pix2Pix network.
 
 ![framework](figs/framework1.png)
-Fig. 1: Overall framework of the proposed AI Data Augmentation in the Service of Rare Tumors.
+*Fig. 1: General framework of the proposed AI Data augmentation in the service of rare tumors.*
 
 ### 1. Manual segmentation of livers
 
