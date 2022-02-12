@@ -38,7 +38,7 @@ Second, our method uses an algorithm to compute an edge mask for each of the 300
 
 ### 3. Transformation of tumor masks
 
-Then, the tumor masks provided by the challenge are automatically transformed with the geometric operations: zoom, rotation and translation. Specifically, our code generates a new tumor mask for each new case to be generated.
+Then, the tumor masks provided by the challenge are automatically transformed with the geometric operations: zoom, rotation, and translation. Specifically, our code generates a new tumor mask for each new case to be generated. This step provides a second contribution to the data augmentation.
 
 ### 4. Generation of new masks: edges + tumor
 
@@ -51,8 +51,7 @@ Next, the new tumor masks are intersected with the liver segmentation of the sou
 
 Finally, all the MRI images are used to feed and train a [Pix2Pix adversarial network](https://arxiv.org/abs/1611.07004), capable of generating completely new MRI images of the liver with tumors, from the edges and tumor masks.
 
-This repository provides an algorithm trained with the method described here.
-To generate X number of cases, this method will create:
+As a summary, this repository provides an algorithm trained with the method described here, which will create the following elements to generate X number of cases:
 1) X new edge masks from random threshold values in a defined range, and
 2) X different tumor masks from random transformations of sizes, rotations, and positions.
 Tumor masks will intersect with liver masks to ensure tumor position. 
