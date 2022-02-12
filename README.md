@@ -24,15 +24,17 @@ Note that the framework was composed of 5 main stages: manual liver segmentation
 
 ### 1. Manual segmentation of livers
 
-First, the MRIs of the 100 cases were manually segmented by the radiologist of the HB-IRIT-UIS team. For this activity, the open-source project Computer Vision Annotation tool [CVAT](https://cvat.org/auth/login) was used.
+First, the MRIs of the 100 cases were manually segmented by the radiologist of the HB-IRIT-UIS team. For this activity, the open-source project Computer Vision Annotation tool [CVAT](https://cvat.org/auth/login) was used as shown in Fig. 2.
 
 ![fig2](figs/FIG2_livers.png)
+*Fig. 2: Random samples of the manual liver segmentation using CVAT.*
 
 ### 2. Edges detection
 
-Second, our method uses an algorithm to compute an edge mask for each of the 300 provided MRIs. Specifically, we use the [Canny edge detection](https://github.com/csbanon/canny-edge-detector), an operator that uses a multi-stage algorithm to detect a wide range of edges in images. In this stage, 12 variations of the lower threshold are made in the range between 30 and 120 for each image. At the end of our pipeline, each edge mask will allow a different new MRI image to be generated. Thus, the variation of the threshold value in this step enables a first data augmentation.
+Second, our method uses an algorithm to compute an edge mask for each of the 300 provided MRIs (see Fig. 3). Specifically, we use the [Canny edge detection](https://github.com/csbanon/canny-edge-detector), an operator that uses a multi-stage algorithm to detect a wide range of edges in images. In this stage, 12 variations of the lower threshold are made in the range between 30 and 120 for each image. At the end of our pipeline, each edge mask will allow a different new MRI image to be generated. Thus, the variation of the threshold value in this step enables a first data augmentation.
 
 ![edges](figs/edges.png)
+*Fig. 3: An edge detection mask that uses the Canny algorithm with a random threshold within a defined range.*
 
 ### 3. Transformation of tumor masks
 
@@ -40,9 +42,10 @@ Then, the tumor masks provided by the challenge are automatically transformed wi
 
 ### 4. Generation of new masks: edges + tumor
 
-Next, the new tumor masks are intersected with the liver segmentation of the source images, in order to ensure that the new tumor is located within the liver. In the figure, the liver is shown in green, tumor inside in red, and tumor outside in blue. Note in the figure that the edges mask (blue lines) calculated in (1) is combined with the mask of the tumor inside (in red). Four random examples of this step are presented below.
+Next, the new tumor masks are intersected with the liver segmentation of the source images, in order to ensure that the new tumor is located within the liver. In Fig. 4, the liver is shown in green, tumor inside in red, and tumor outside in blue. Notice that the edges mask (blue lines) calculated in (1) is combined with the mask of the tumor inside (in red). Four random examples of this step are presented below.
 
 ![fig1](figs/FIG1.png)
+*Fig. 4: Four examples of (left) the intersection between the liver mask and the transformed tumor mask, and (right) the new edges and tumor mask.*
 
 ### 5. Training of a Pix2Pix network
 
@@ -52,7 +55,9 @@ This repository provides an algorithm trained with the method described here.
 To generate X number of cases, this method will create:
 1) X new edge masks from random threshold values in a defined range, and
 2) X different tumor masks from random transformations of sizes, rotations, and positions.
-Tumor masks will intersect with liver masks to ensure tumor position. And finally, synthetic images will be recreated that preserve the quality, appearance, and spatial distribution of the images provided by the challenge.
+Tumor masks will intersect with liver masks to ensure tumor position. 
+
+Finally, synthetic images will be recreated that preserve the quality, appearance, and spatial distribution of the images provided by the challenge.
 
 # Steps to Run the Code
 ### 0. Requirements
