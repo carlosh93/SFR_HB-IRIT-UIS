@@ -31,7 +31,7 @@ First, the MRIs of the 100 cases were manually segmented by the radiologist of t
 
 ### 2. Edges detection
 
-Second, our method uses an algorithm to compute an edge mask for each of the 300 provided MRIs (see Fig. 3). Specifically, we use the [Canny edge detection](https://github.com/csbanon/canny-edge-detector), an operator that uses a multi-stage algorithm to detect a wide range of edges in images. In this stage, 12 variations of the lower threshold are made in the range between 30 and 120 for each image. At the end of our pipeline, each edge mask will allow a different new MRI image to be generated. Thus, the variation of the threshold value in this step enables a first data augmentation.
+Second, our method uses an algorithm to compute an edge mask for each of the 300 provided MRIs (see Fig. 3). Specifically, we use the [Canny edge detector](https://github.com/csbanon/canny-edge-detector), an operator that uses a multi-stage algorithm to detect a wide range of edges in images. In this stage, 12 variations of the lower threshold are made in the range between 30 and 120 for each image. At the end of our pipeline, each edge mask will allow a different new MRI image to be generated. Thus, the variation of the threshold value in this step enables a first data augmentation.
 
 ![edges](figs/edges.png)
 *Fig. 3: An edge detection mask that uses the Canny algorithm with a random threshold within a defined range.*
