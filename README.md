@@ -19,7 +19,7 @@ Based on the implemented algorithm, the user will be able to enter the number of
 Figure outlines the method proposed by our team to address the challenge of augmenting MRI data with rare tumors.
 Note that the framework was composed of 5 main stages: edge detection, manual liver segmentation, tumor masks transformation, generation of new masks, and training of a Pix2pix network.
 
-![framework](figs/framework.png)
+![framework](figs/framework1.png)
 
 
 ### 1. Manual segmentation of livers
