@@ -64,11 +64,15 @@ Finally, synthetic images will be created that preserve the quality, appearance,
 *Fig. 5: Generated MRIs for two cases with the proposed method by the HB-IRIT-UIS team.*
 
 # Steps to Run the Code
+
+The following steps must be executed in Google Colab.
+
 ### 0. Requirements
 The Code was tested only in Linux operating system. See the `requirements.txt` file for python packages requirements. Install them using
 ```
 pip install -r requirements.txt
 ```
+
 ### 1. Data Preprocessing
 Download the three data files ('data_1_2021.tar', 'data_2_2021.tar', 'data_3_2021.tar') and run file `preprocessing.py`
 ```
