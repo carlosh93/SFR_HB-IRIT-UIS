@@ -31,7 +31,7 @@ First, the MRIs of the 100 cases were manually segmented by the radiologist of t
 
 ### 2. Edges detection
 
-Second, our method uses an algorithm to compute an edge mask for each of the 300 provided MRIs (see Fig. 3). Specifically, we use the [Canny edge detector](https://github.com/csbanon/canny-edge-detector), an operator that uses a multi-stage algorithm to detect a wide range of edges in images. In this stage, 12 variations of the lower threshold are made in the range between 30 and 120 for each image. At the end of our pipeline, each edge mask will allow a different new MRI image to be generated. Thus, the variation of the threshold value in this step enables a first data augmentation.
+Second, our method uses an algorithm to compute an edge mask for each of the 300 provided MRIs (see Fig. 3). Specifically, we use the [Canny edge detector](https://github.com/csbanon/canny-edge-detector), an operator that uses a multi-stage algorithm to detect a wide range of edges in images. In this stage, 12 variations of the lower threshold are made in the range between 30 and 120 for each image. At the end of our pipeline, each edge mask will allow a different new MRI image to be generated. Thus, the variation of the threshold value in this step enables a first data augmentation strategy.
 
 ![edges](figs/edges.png)
 *Fig. 3: An edge detection mask that uses the Canny algorithm with a random threshold within a defined range.*
@@ -49,7 +49,7 @@ Next, the new tumor masks are intersected with the liver segmentation of the sou
 
 ### 5. Training of a Pix2Pix network
 
-Finally, all the MRI images are used to feed and train a [Pix2Pix adversarial network](https://arxiv.org/abs/1611.07004), capable of generating completely new MRI images of the liver with tumors, from the edges and tumor masks.
+Finally, all the MRI images are used to feed and train a [Pix2Pix adversarial network](https://arxiv.org/abs/1611.07004), capable of generating whole new MRI images of the liver with tumors, from the edges and tumor masks.
 
 As a summary, this repository provides an algorithm trained with the method described here, which will create the following elements to generate X number of cases:
 1) X new edge masks from random threshold values in a defined range, and
