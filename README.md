@@ -27,7 +27,7 @@ Note that the framework was composed of 5 main stages: manual liver segmentation
 First, the MRIs of the 100 cases were manually segmented by the radiologist of the HB-IRIT-UIS team. For this activity, the open-source project Computer Vision Annotation tool [CVAT](https://cvat.org/auth/login) was used as shown in Fig. 2.
 
 ![fig2](figs/FIG2_livers.png)
-*Fig. 2: Random samples of the manual liver segmentation using CVAT.*
+*Fig. 2: Random samples of the manual liver segmentation using the CVAT tool.*
 
 ### 2. Edges detection
 
