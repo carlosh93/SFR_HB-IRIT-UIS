@@ -63,7 +63,7 @@ Finally, synthetic images will be created that preserve the quality, appearance,
 
 # Steps to Run the Code
 
-The following steps must be executed in the [Google Colab file available here.](Thttps://drive.google.com/drive/folders/1bDTZ85NSm0GxkLIpdkIFi9GJNArX5zYp?usp=sharing)
+The following steps must be executed in the [Google Colab file available here.](https://drive.google.com/drive/folders/1bDTZ85NSm0GxkLIpdkIFi9GJNArX5zYp?usp=sharing)
 
 ### 0. Requirements
 The Code was tested only in Linux operating system. See the `requirements.txt` file for python packages requirements. Install them using
