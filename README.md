@@ -49,7 +49,7 @@ Next, the new tumor masks are intersected with the liver segmentation of the sou
 
 ### 5. Training of a Pix2Pix network
 
-In the last step, all the MRI are used to feed and train a [Pix2Pix adversarial network](https://arxiv.org/abs/1611.07004).
+In the last step, all the MRIs are used to feed and train a [Pix2Pix adversarial network](https://arxiv.org/abs/1611.07004).
 Then, we generated three linked copies of the trained Pix2Pix network, and each is separately retrained with each type of MRIs (portal T1, arterial T1, and T2).
 In this way, for each edges and tumor mask, our method simultaneously generates 3 MRIs of different contrasts (same as in the training data) of a new case of liver tumor.
 
