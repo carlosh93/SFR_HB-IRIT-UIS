@@ -1,4 +1,4 @@
-### Data Challenge SFR 2021 results from the **HB-IRIT-UIS team:** Hôpital Bicêtre - IRIT lab - CREATIS lab - UIS.
+### Data Challenge SFR 2021 results from the **HB-IRIT-CREATIS-UIS team:** Hôpital Bicêtre - IRIT lab - CREATIS lab - UIS.
 
 *Data Challenge Title:* Augmenting AI Data in the Service of Rare Tumors.
 
@@ -11,7 +11,7 @@
 - Kevin Arias (PhD Student in computer science, UIS)
 - Karen Yaneth Sánchez (PhD Student in engineering, UIS)
 
-# Proposed Data Augmentation by the HB-IRIT-UIS team
+# Proposed Data Augmentation by the HB-IRIT-CREATIS-UIS team
 
 This repository presents the solution created by our team to generate a database of 1000 MRIs from 100 MRIs of macrotrabecular carcinomas.
 Based on the implemented algorithm, the user will be able to enter the number of cases to generate. The code will automatically create three new and different MRIs of hepatic macrotrabecular carcinomas for each desired case. To test the AI-based data augmentation method created by our team, you can go [to this link.](https://drive.google.com/drive/folders/1bDTZ85NSm0GxkLIpdkIFi9GJNArX5zYp?usp=sharing) The steps to run the code are described at the end of this repository.
