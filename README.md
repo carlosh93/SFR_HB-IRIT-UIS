@@ -1,15 +1,15 @@
-### Data Challenge SFR 2021 results from the **HB-IRIT-UIS team:** Hôpital Bicêtre - IRIT lab - UIS.
+### Data Challenge SFR 2021 results from the **HB-IRIT-UIS team:** Hôpital Bicêtre - IRIT lab - CREATIS lab - UIS.
 
 *Data Challenge Title:* Augmenting AI Data in the Service of Rare Tumors.
 
 #### Team members and profiles
-- Olivier Meyrignac (Radiologist MD PhD)
-- Denis Kouamé (Statutory researcher PhD)
-- Adrian Basarab (Statutory researcher PhD)
-- Henry Arguello Fuentes (Statutory researcher PhD)
-- Carlos Alberto Hinojosa Montero (PhD Student in computer science)
-- Kevin Arias (PhD Student in computer science)
-- Karen Yaneth Sánchez (PhD Student in engineering)
+- Olivier Meyrignac (Radiologist MD PhD, Hôpital Bicêtre)
+- Denis Kouamé (Statutory researcher PhD, IRIT lab)
+- Adrian Basarab (Statutory researcher PhD, CREATIS lab)
+- Henry Arguello Fuentes (Statutory researcher PhD, UIS)
+- Carlos Alberto Hinojosa Montero (PhD Student in computer science, UIS)
+- Kevin Arias (PhD Student in computer science, UIS)
+- Karen Yaneth Sánchez (PhD Student in engineering, UIS)
 
 # Proposed Data Augmentation by the HB-IRIT-UIS team
 
