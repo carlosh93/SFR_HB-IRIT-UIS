@@ -24,7 +24,7 @@ if __name__ == '__main__':
         mask = ImageOps.grayscale(mask)
         mask = np.array(mask)
         mask = (mask > 65).astype('uint8')
-        mask = cv2.resize(mask, (512, 512), interpolation=cv2.INTER_NEAREST)
+        # mask = cv2.resize(mask, (512, 512), interpolation=cv2.INTER_NEAREST)
         mask = np.expand_dims(mask, -1)
         current_id = mask_file.split("/")[-1].split(".")[0]
 
@@ -35,7 +35,7 @@ if __name__ == '__main__':
         img = Image.open("data/results/SFR_portale/"+current_id+"_fake.png")
         img = ImageOps.grayscale(img)
         img = np.array(img)
-        img = cv2.resize(img, (512, 512))
+        # img = cv2.resize(img, (512, 512))
         img = np.expand_dims(img, -1)
         full_img = np.concatenate((img, mask), axis=-1)
         with open(save_file + new_id +"-"+'T1 phase portale'+'.npy', 'wb') as f_portale:
@@ -46,7 +46,7 @@ if __name__ == '__main__':
         img = Image.open("data/results/SFR_centre/"+current_id+"_fake.png")
         img = ImageOps.grayscale(img)
         img = np.array(img)
-        img = cv2.resize(img, (512, 512))
+        # img = cv2.resize(img, (512, 512))
         img = np.expand_dims(img, -1)
         full_img = np.concatenate((img, mask), axis=-1)
         with open(save_file + new_id +"-"+'T2 centrée'+'.npy', 'wb') as f_centre:
@@ -57,7 +57,7 @@ if __name__ == '__main__':
         img = Image.open("data/results/SFR_arterielle/"+current_id+"_fake.png")
         img = ImageOps.grayscale(img)
         img = np.array(img)
-        img = cv2.resize(img, (512, 512))
+        # img = cv2.resize(img, (512, 512))
         img = np.expand_dims(img, -1)
         full_img = np.concatenate((img, mask), axis=-1)
         with open(save_file + new_id +"-"+'T1 phase artérielle'+'.npy', 'wb') as f_arterialle:
