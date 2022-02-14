@@ -1,4 +1,8 @@
 # Byte-compiled / optimized / DLL files
+code/data/submit_files
+code/data/submit_files.zip
+code/data/results
+code/data/output
 code/data/*.tar
 code/data/SFR_Data/
 local_venv

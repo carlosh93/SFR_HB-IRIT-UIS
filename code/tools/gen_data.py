@@ -155,7 +155,7 @@ def generate_new_masks(root_dir, dest_dir, num_cases, plot_over_seg):
             img /= img.max()
             img *= 255
             img = img.astype('uint8')
-            lt = np.random.randint(10, 120)
+            lt = np.random.randint(10, 100)
             edges = cv2.Canny(img, lt, 240).astype('float32') / 255.0
             edges = edges * (-1 * mask + 1)
             join_mask = np.zeros((256, 256, 3))
