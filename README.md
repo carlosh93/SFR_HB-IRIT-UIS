@@ -1,3 +1,5 @@
+## We won the third place in the data challenge competition for rare tumors organized by the Société Française de Radiologie (SFR) - France. :trophy:
+
 ### Data Challenge SFR 2021 results from the **HB-IRIT-CREATIS-UIS team:** Hôpital Bicêtre - IRIT lab - CREATIS lab - UIS.
 
 *Data Challenge Title:* Augmenting AI Data in the Service of Rare Tumors.
